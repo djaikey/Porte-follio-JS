@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Index.css">
     <script src="/Index.js" defer></script>
     <script src="/articles.js"></script>
+    <script src="caroussel.js" defer></script>
 
 </head>
 
@@ -19,6 +20,7 @@
                 <div class="line"></div>
                 <div class="Nav-options" id="Nav-option">
                     <!-- 
+                        partie intégrée en JS
                     <a id="option" href="#">À propos de moi</a>
                     <a id="option" href="#">Mes compétences</a>
                     <a id="option" href="#">Modèles de Projets</a>
@@ -29,7 +31,7 @@
         </div>
         </div>
         <div class="card-annim">
-            <div class="card"> <img class="card-photo" src="/Asset/Avatar-Maker.png" alt="Photo">
+            <div class="card"> <img class="card-photo" src="Asset/md.png" alt="Photo">
                 <div class="card-info">
                     <h1>Johanna.K</h1>
                     <p>Marketing Digital</p>
@@ -45,7 +47,7 @@
     <main>
 
         <section class="section">
-            <article class="section-contenu" id="contenu1">
+            <article class="section-contenu" id="contenu1" style="display: none;">
                 <h2 id="article-title">Titre de l'article</h2>
                 <p id="article-body">Contenu de l'article</p>
             </article>
@@ -53,9 +55,25 @@
                 <h2>Titre de l'article</h2>
                 <p>Contenu de l'article</p>
             </article>
-            <article class="section-contenu" id="contenu3" style="display: none;">
+            <article class="section-contenu" id="contenu3" style="display: block;">
                 <h2>Titre de l'article</h2>
                 <p>Contenu de l'article</p>
+                <div class="carousel" id="caroussel">
+
+                    <div class="carousel-control" id="prev-button">Précédent</div>
+                    <div id="shadows"></div>
+                    <div class="carousel-container">
+                        <div class="carousel-item"><img id="Images-caroussel-1" src="Asset/md.png" alt="Image 1"></div>
+                        <div class="carousel-item"><img id="Images-caroussel-2" src="Asset/md.png" alt="Image 2"></div>
+                        <div class="carousel-item"><img id="Images-caroussel-3" src="Asset/md.png" alt="Image 3"></div>
+
+                        <!-- Ajoutez autant d'éléments d'image que nécessaire -->
+                    </div>
+                    <div id="shadows"></div>
+                    <div class="carousel-control" id="next-button">Suivant</div>
+
+
+                </div>
             </article>
         </section>
 
@@ -63,11 +81,11 @@
             <h2>Formulaire de contact</h2>
             <Form method="post" class="form">
                 <label for="name">Nom</label>
-                <input type="text">
+                <input type="text" required>
                 <label for="firstname">Prénom</label>
-                <input type="text">
+                <input type="text" required>
                 <label for="email">Email</label>
-                <input type="email">
+                <input type="email" required>
                 <input type="submit" class="form-button">
             </Form>
         </section>

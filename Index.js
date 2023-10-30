@@ -1,6 +1,8 @@
 const logo = document.getElementById('logo');
 
 
+
+
 const optionsTitles = [
   { id: 1, name: 'À propos de moi' },
   { id: 2, name: "Mes compétences" },
@@ -14,6 +16,7 @@ function navOptionsTitle() {
     const navOptions = document.getElementById('Nav-option')
     let option = document.createElement("a");
     option.id = "option";
+    option.className=(titleName.name)
     option.value = (titleName.id)
     option.innerText = (titleName.name);
     option.href = "#";
@@ -27,12 +30,10 @@ function navOptionsTitle() {
 }
 navOptionsTitle();
 
-
-
 logo.addEventListener("click", (e) => {
     
     console.log(e.target);
-  });
+});
 
 
 
